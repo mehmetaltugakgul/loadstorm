@@ -21,7 +21,7 @@ Make sure you have Go installed on your machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/loadstorm.git
+   git clone https://github.com/mehmetaltugakgul/loadstorm.git
    cd loadstorm
 
 2. 
