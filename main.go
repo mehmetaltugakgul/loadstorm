@@ -132,13 +132,14 @@ func runLoadTestWithRate(config LoadTestConfig, duration time.Duration) LoadTest
 }
 
 func main() {
-	fmt.Println("    __                       __   _____   __                            ")
-	fmt.Println("   / /   ____   ____ _  ____/ /  / ___/  / /_  ____    _____   ____ ___ ")
-	fmt.Println("  / /   / __ \\ / __ `/ / __  /   \\__ \\  / __/ / __ \\  / ___/  / __ `__ \\")
-	fmt.Println(" / /___/ /_/ // /_/ / / /_/ /   ___/ / / /_  / /_/ / / /     / / / / / /")
-	fmt.Println("/_____/\\____/ \\__,_/  \\__,_/   /____/  \\__/  \\____/ /_/     /_/ /_/ /_/ ")
-	fmt.Println(" ")
-	fmt.Println(" ")
+	fmt.Println(`
+    __                      __ _____  __                        
+   / /   ____   ____ _ ____/ // ___/ / /_ ____   _____ ____ ___ 
+  / /   / __ \ / __ ` + "`" + `// __  / \__ \ / __// __ \ / ___// __ ` + "`" + `__ \
+ / /___/ /_/ // /_/ // /_/ / ___/ // /_ / /_/ // /   / / / / / /
+/_____/\____/ \__,_/ \__,_/ /____/ \__/ \____//_/   /_/ /_/ /_/ 
+                                                                
+`)
 
 	var url string
 	fmt.Print(color.YellowString("Please enter the URL to load test: "))
