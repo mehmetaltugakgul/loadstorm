@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -47,7 +46,7 @@ func makeRequest(url string, method string, data []byte, requestNum int, wg *syn
 		resp.Body = http.NoBody
 		resp.ContentLength = 0
 		resp.GetBody = func() (io.ReadCloser, error) {
-			return ioutil.NopCloser(bytes.NewReader(data)), nil
+			return io.NopCloser(bytes.NewReader(data)), nil
 		}
 	}
 
@@ -133,10 +132,13 @@ func runLoadTestWithRate(config LoadTestConfig, duration time.Duration) LoadTest
 }
 
 func main() {
-
-	fmt.Println(color.CyanString("**************************************************"))
-	fmt.Println(color.CyanString("*                    LoadStorm                    *"))
-	fmt.Println(color.CyanString("**************************************************"))
+	fmt.Println("    __                       __   _____   __                            ")
+	fmt.Println("   / /   ____   ____ _  ____/ /  / ___/  / /_  ____    _____   ____ ___ ")
+	fmt.Println("  / /   / __ \\ / __ `/ / __  /   \\__ \\  / __/ / __ \\  / ___/  / __ `__ \\")
+	fmt.Println(" / /___/ /_/ // /_/ / / /_/ /   ___/ / / /_  / /_/ / / /     / / / / / /")
+	fmt.Println("/_____/\\____/ \\__,_/  \\__,_/   /____/  \\__/  \\____/ /_/     /_/ /_/ /_/ ")
+	fmt.Println(" ")
+	fmt.Println(" ")
 
 	var url string
 	fmt.Print(color.YellowString("Please enter the URL to load test: "))
