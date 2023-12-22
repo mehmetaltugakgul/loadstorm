@@ -47,13 +47,11 @@ Press Ctrl+C to stop the load test at any time.
 
 
 Configuration
-You can customize the load test by modifying the source code. Configuration options are available in the loadtest.go and duration.go files.
+You can customize the load test by modifying the source code. Configuration options are available in the main.go file.
 
 Results
 Results of the load test, including successful and failed requests, will be displayed at the end of the test. Additionally, detailed logs are saved in the request_logs.txt file.
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 Acknowledgments
 This tool was created as part of a project to analyze web service performance.
