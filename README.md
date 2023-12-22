@@ -27,7 +27,9 @@ Make sure you have Go installed on your machine.
 2. 
      ```bash
    go run main.go
-   
+
+
+![image](https://github.com/mehmetaltugakgul/loadstorm/assets/10194009/86c21f20-4de7-4932-a5dc-9469c825f901)
 
 Usage
 Enter the URL to load test when prompted.
@@ -37,6 +39,9 @@ Optionally provide data to include in the request body.
 The load test will run, and the results will be displayed.
 Stopping the Load Test:
 Press Ctrl+C to stop the load test at any time.
+
+![image](https://github.com/mehmetaltugakgul/loadstorm/assets/10194009/50591483-f995-4845-987b-ea4322505373)
+
 
 Configuration
 You can customize the load test by modifying the source code. Configuration options are available in the loadtest.go and duration.go files.
