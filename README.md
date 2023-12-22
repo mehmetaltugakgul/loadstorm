@@ -1,3 +1,6 @@
+![image](https://github.com/mehmetaltugakgul/loadstorm/assets/10194009/53e601eb-9eba-44c3-b3f9-e6ebd59e7dd6)
+
+
 # LoadStorm
 
 LoadStorm is a simple command-line tool for conducting load tests on web services. It allows you to send multiple HTTP requests to a specified URL and analyze the performance of your service under different conditions.
