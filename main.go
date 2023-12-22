@@ -133,6 +133,11 @@ func runLoadTestWithRate(config LoadTestConfig, duration time.Duration) LoadTest
 }
 
 func main() {
+
+	fmt.Println(color.CyanString("**************************************************"))
+	fmt.Println(color.CyanString("*                    LoadStorm                    *"))
+	fmt.Println(color.CyanString("**************************************************"))
+
 	var url string
 	fmt.Print(color.YellowString("Please enter the URL to load test: "))
 	fmt.Scanln(&url)
@@ -191,4 +196,8 @@ func main() {
 	fmt.Printf("Total Requests: %d\n", result.TotalRequests)
 	fmt.Printf(color.GreenString("Successful Requests: %d\n"), result.SuccessfulRequests)
 	fmt.Printf(color.RedString("Failed Requests: %d\n"), result.FailedRequests)
+	fmt.Print("Press any key to exit...")
+	fmt.Scanln()
+
+	fmt.Println("Exiting.")
 }
