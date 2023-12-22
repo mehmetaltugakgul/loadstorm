@@ -74,8 +74,9 @@ func makeRequest(url string, method string, data []byte, requestNum int, wg *syn
 	fmt.Printf(color.GreenString("Response Body: %v\n"), response.Body)
 	fmt.Printf(color.GreenString("Response Headers: %v\n"), response.Header)
 	fmt.Println(color.GreenString("--------------------------------------------------"))
+
 	successMsg := fmt.Sprintf("Request %d completed in %v\n", requestNum, elapsed)
-	logAndPrint(color.GreenString, successMsg+fmt.Sprintf("Response Status: %v\n", response.Status)+fmt.Sprintf("Response Body: %v\n", response.Body)+fmt.Sprintf("Response Headers: %v\n", response.Header)+"--------------------------------------------------")
+	logAndPrint(color.GreenString, successMsg+fmt.Sprintf("Response Status: %v\n", response.Status)+fmt.Sprintf("Response Body: %v\n", response.Body)+fmt.Sprintf("Response Headers: %v\n", response.Header)+"--------------------------------------------------\n")
 
 }
 
