@@ -198,7 +198,7 @@ func main() {
 	fmt.Printf("Total Requests: %d\n", result.TotalRequests)
 	fmt.Printf(color.GreenString("Successful Requests: %d\n"), result.SuccessfulRequests)
 	fmt.Printf(color.RedString("Failed Requests: %d\n"), result.FailedRequests)
-	fmt.Print("Press any key to exit...")
+	fmt.Print("Press ENTER to exit...")
 	fmt.Scanln()
 	fmt.Println("Exiting.")
 }
