@@ -45,14 +45,14 @@ Press Ctrl+C to stop the load test at any time.
 ![image](https://github.com/mehmetaltugakgul/loadstorm/assets/10194009/50591483-f995-4845-987b-ea4322505373)
 
 
-###Configuration:
+# Configuration:
 You can customize the load test by modifying the source code. Configuration options are available in the main.go file.
 
-###Results:
+# Results:
 Results of the load test, including successful and failed requests, will be displayed at the end of the test. Additionally, detailed logs are saved in the request_logs.txt file.
 
 
-###Acknowledgments
+# Acknowledgments
 This tool was created as part of a project to analyze web service performance.
 Thanks to the Go community for providing helpful libraries.
 Feel free to contribute or report issues. Happy load testing!
