@@ -198,6 +198,5 @@ func main() {
 	fmt.Printf(color.RedString("Failed Requests: %d\n"), result.FailedRequests)
 	fmt.Print("Press any key to exit...")
 	fmt.Scanln()
-
 	fmt.Println("Exiting.")
 }
