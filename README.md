@@ -52,7 +52,7 @@ You can customize the load test by modifying the source code. Configuration opti
 Results of the load test, including successful and failed requests, will be displayed at the end of the test. Additionally, detailed logs are saved in the request_logs.txt file.
 
 
-# Acknowledgments
+### Acknowledgments
 This tool was created as part of a project to analyze web service performance.
 Thanks to the Go community for providing helpful libraries.
 Feel free to contribute or report issues. Happy load testing!
