@@ -28,8 +28,12 @@ Make sure you have Go installed on your machine.
    cd loadstorm
 
 2. 
-     ```bash
+   ```bash
    go run main.go
+
+3. 
+   ```bash
+   or you can run main.exe directly
 
 ![image](https://github.com/mehmetaltugakgul/loadstorm/assets/10194009/86c21f20-4de7-4932-a5dc-9469c825f901)
 
