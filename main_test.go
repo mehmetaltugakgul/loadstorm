@@ -9,13 +9,12 @@ import (
 )
 
 func TestMakeRequest(t *testing.T) {
-	
+
 	server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
 		rw.WriteHeader(http.StatusOK)
 	}))
 	defer server.Close()
 
-	// Set up test data
 	url := server.URL
 	method := "GET"
 	data := []byte("testData")
@@ -24,14 +23,11 @@ func TestMakeRequest(t *testing.T) {
 	var mu sync.Mutex
 	result := LoadTestResult{}
 
-	// Run the makeRequest function in a goroutine
 	wg.Add(1)
 	go makeRequest(url, method, data, 1, &wg, &mu, &result)
 
-	// Wait for the goroutine to finish
 	wg.Wait()
 
-	// Check the result
 	if result.TotalRequests != 1 {
 		t.Errorf("Expected total requests to be 1, got %d", result.TotalRequests)
 	}
@@ -44,13 +40,12 @@ func TestMakeRequest(t *testing.T) {
 }
 
 func TestRunLoadTestWithRate(t *testing.T) {
-	// Create a test server
+
 	server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
 		rw.WriteHeader(http.StatusOK)
 	}))
 	defer server.Close()
 
-	// Set up test data
 	url := server.URL
 	method := "GET"
 	data := []byte("testData")
@@ -62,10 +57,8 @@ func TestRunLoadTestWithRate(t *testing.T) {
 	}
 	duration := time.Millisecond * 100
 
-	// Run the load test
 	result := runLoadTestWithRate(config, duration)
 
-	// Check the result
 	if result.TotalRequests != 5 {
 		t.Errorf("Expected total requests to be 5, got %d", result.TotalRequests)
 	}
